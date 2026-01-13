@@ -1136,7 +1136,7 @@ nav {
   }
 
   .section h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -1419,6 +1419,33 @@ body.footer-legal-page .container {
 
 .home-details .btn:last-child {
   margin-bottom: 0;
+}
+
+/* Stack carousel cards on mobile (no absolute positioning) */
+.features-carousel-wrapper {
+  overflow: visible;
+}
+
+.features-carousel .features-grid,
+body.js-enabled .features-carousel .features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: auto;
+  gap: 1.25rem;
+}
+
+.features-carousel .feature-card,
+body.js-enabled .features-carousel .feature-card {
+  position: relative;
+  min-width: auto;
+  max-width: 100%;
+  display: flex;
+  opacity: 1;
+}
+
+.carousel-btn,
+.carousel-dots {
+  display: none;
 }
 
 /* Footer */
