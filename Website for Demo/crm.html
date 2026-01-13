@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Dashboard | Basil & Sage Homes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .crm-container {
+            margin-top: 100px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .crm-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .crm-table th,
+        .crm-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .crm-table th {
+            background: #1e40af;
+            color: white;
+            font-weight: 600;
+        }
+
+        .crm-table tr:hover {
+            background: #f9fafb;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-yes {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-no {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .nav-crm {
+            background: #1e40af;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-crm a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="about-page">
+    <nav class="nav-crm">
+        <a href="index.html">Basil & Sage Homes Admin</a>
+        <button onclick="fetchLeads()" class="btn btn-primary" style="padding: 0.5rem 1rem;">Refresh Leads</button>
+    </nav>
+
+    <div class="container crm-container">
+        <h1>Lead Capture Dashboard</h1>
+        <p>Real-time list of potential tenants captured via the hero page chat box.</p>
+
+        <div id="leads-loading">Loading leads...</div>
+
+        <table class="crm-table" id="crm-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Found Home?</th>
+                    <th>Location</th>
+                    <th>Wants Tour?</th>
+                </tr>
+            </thead>
+            <tbody id="leads-body">
+                <!-- Leads will be injected here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        async function fetchLeads() {
+            const loading = document.getElementById('leads-loading');
+            const table = document.getElementById('crm-table');
+            const body = document.getElementById('leads-body');
+
+            try {
+                const response = await fetch('http://localhost:3000/api/leads');
+                const leads = await response.json();
+
+                body.innerHTML = '';
+                leads.reverse().forEach(lead => {
+                    const row = document.createElement('tr');
+                    const date = new Date(lead.createdAt).toLocaleDateString() + ' ' + new Date(lead.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+                    row.innerHTML = `
+                        <td>${date}</td>
+                        <td><strong>${lead.name}</strong></td>
+                        <td>${lead.email || '-'}</td>
+                        <td>${lead.phone || '-'}</td>
+                        <td><span class="status-badge status-${lead.foundHome?.toLowerCase() === 'yes' ? 'yes' : 'no'}">${lead.foundHome || 'No'}</span></td>
+                        <td>${lead.location || '-'}</td>
+                        <td><span class="status-badge status-${lead.wantsTour?.toLowerCase() === 'yes' ? 'yes' : 'no'}">${lead.wantsTour || 'No'}</span></td>
+                    `;
+                    body.appendChild(row);
+                });
+
+                loading.style.display = 'none';
+                table.style.display = 'table';
+            } catch (error) {
+                console.error('Error fetching leads:', error);
+                loading.textContent = 'Error loading leads. Is the server running?';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchLeads);
+    </script>
+</body>
+
+</html>
