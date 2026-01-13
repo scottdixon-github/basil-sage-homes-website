@@ -482,7 +482,14 @@ body.footer-legal-page .section {
   min-width: 800px;
   max-width: 1000px;
   opacity: 0;
+  display: none;
   transition: opacity 2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Show first card by default (fallback if JS doesn't load) */
+.features-carousel .feature-card:first-child {
+  opacity: 1;
+  display: flex;
 }
 
 .features-grid {
