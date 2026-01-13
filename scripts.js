@@ -2,38 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Flag that JS is enabled (used for carousel layout)
   document.body.classList.add('js-enabled');
-
-  // Cookie Consent Banner
-  const cookieBanner = document.getElementById('cookie-consent-banner');
-  const cookieAccept = document.getElementById('cookie-accept');
-  const cookieDecline = document.getElementById('cookie-decline');
-
-  if (cookieBanner && cookieAccept && cookieDecline) {
-    // Check if user has already made a choice
-    const cookieConsent = localStorage.getItem('cookieConsent');
-    
-    if (!cookieConsent) {
-      // Show banner after a short delay
-      setTimeout(() => {
-        cookieBanner.classList.add('show');
-      }, 1000);
-    }
-
-    // Accept cookies
-    cookieAccept.addEventListener('click', () => {
-      localStorage.setItem('cookieConsent', 'accepted');
-      cookieBanner.classList.remove('show');
-      // You can add analytics or tracking code here
-      console.log('Cookies accepted');
-    });
-
-    // Decline cookies
-    cookieDecline.addEventListener('click', () => {
-      localStorage.setItem('cookieConsent', 'declined');
-      cookieBanner.classList.remove('show');
-      console.log('Cookies declined');
-    });
-  }
   // Mobile menu toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
