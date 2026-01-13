@@ -40,7 +40,7 @@ body {
   position: relative;
   color: white;
   padding: 4rem 0;
-  background: linear-gradient(135deg, rgba(44, 34, 22, 0.6) 0%, rgba(92, 70, 44, 0.6) 100%),
+  background: linear-gradient(135deg, rgba(62, 46, 24, 0.48) 0%, rgba(138, 106, 50, 0.48) 100%),
     url('assets/charleston-sc.png') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
@@ -73,7 +73,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(210, 180, 140, 0.22) 0%, rgba(250, 242, 226, 0.22) 100%);
+  background: linear-gradient(135deg, rgba(255, 215, 140, 0.18) 0%, rgba(255, 244, 214, 0.18) 100%);
   z-index: 1;
 }
 
@@ -234,14 +234,14 @@ body.faq-page {
 
 /* Property detail pages with translucent gradient light blue */
 body.property-detail-page {
-  background: linear-gradient(135deg, rgba(245, 230, 204, 0.40) 0%, rgba(250, 242, 226, 0.30) 50%, rgba(245, 230, 204, 0.40) 100%);
+  background: linear-gradient(135deg, rgba(255, 244, 214, 0.42) 0%, rgba(255, 233, 190, 0.32) 50%, rgba(255, 244, 214, 0.42) 100%);
   min-height: 100vh;
 }
 
 body.property-detail-page .hero {
   min-height: 50vh;
   padding: 2rem 0;
-  background: linear-gradient(135deg, rgba(92, 70, 44, 0.85) 0%, rgba(152, 117, 84, 0.75) 100%);
+  background: linear-gradient(135deg, rgba(118, 86, 32, 0.72) 0%, rgba(184, 142, 68, 0.64) 100%);
 }
 
 body.property-detail-page .hero-content {
@@ -419,7 +419,7 @@ body.footer-legal-page .section {
 
 /* FEATURES */
 .features {
-  background: linear-gradient(135deg, rgba(250, 242, 226, 0.45) 0%, rgba(245, 230, 204, 0.55) 100%),
+  background: linear-gradient(135deg, rgba(255, 244, 214, 0.42) 0%, rgba(255, 228, 170, 0.48) 100%),
     url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
   background-size: 110%;
   background-position: center;
@@ -546,7 +546,7 @@ body.js-enabled .features-carousel .features-grid {
 .feature-card:hover {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  background: linear-gradient(135deg, rgba(250, 242, 226, 0.45) 0%, rgba(245, 230, 204, 0.55) 100%);
+  background: linear-gradient(135deg, rgba(255, 244, 214, 0.42) 0%, rgba(255, 228, 170, 0.48) 100%);
 }
 
 .feature-icon {
@@ -1576,14 +1576,14 @@ nav {
    LEGAL FOOTER STYLES (Standardized)
    ========================================= */
 .legal-footer {
-  background: linear-gradient(135deg, rgba(245, 230, 204, 0.45) 0%, rgba(250, 242, 226, 0.40) 50%, rgba(255, 237, 213, 0.45) 100%);
+  background: linear-gradient(135deg, rgba(255, 244, 214, 0.55) 0%, rgba(255, 233, 190, 0.48) 50%, rgba(255, 244, 214, 0.55) 100%);
   backdrop-filter: blur(30px) saturate(200%) brightness(1.1);
   -webkit-backdrop-filter: blur(30px) saturate(200%) brightness(1.1);
   color: #1f2937;
   padding: 2rem 0 1rem;
   margin-top: 0;
-  border-top: 2px solid rgba(210, 180, 140, 0.55);
-  box-shadow: 0 -8px 32px rgba(92, 70, 44, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-top: 2px solid rgba(230, 195, 106, 0.55);
+  box-shadow: 0 -8px 32px rgba(118, 86, 32, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* FIX: Prevent global Liquid Glass styling from affecting the footer container */
@@ -2067,12 +2067,12 @@ body .footer .container {
   right: 0;
   width: 320px;
   height: 450px;
-  background: rgba(250, 242, 226, 0.78);
+  background: rgba(255, 244, 214, 0.78);
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(92, 70, 44, 0.18);
+  box-shadow: 0 8px 32px rgba(118, 86, 32, 0.16);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -2088,7 +2088,7 @@ body .footer .container {
 
 .chat-header {
   padding: 1rem 1.25rem;
-  background: linear-gradient(135deg, rgba(92, 70, 44, 0.95) 0%, rgba(152, 117, 84, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(118, 86, 32, 0.92) 0%, rgba(184, 142, 68, 0.84) 100%);
   color: white;
   display: flex;
   justify-content: space-between;
