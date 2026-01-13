@@ -478,6 +478,16 @@ body.footer-legal-page .section {
 
 /* Carousel-specific Card Styles */
 .features-carousel .feature-card {
+  /* Fallback: show as regular cards when JS is not available */
+  position: relative;
+  min-width: auto;
+  max-width: none;
+  opacity: 1;
+  display: flex;
+}
+
+/* When JS is enabled, we switch to carousel behavior */
+body.js-enabled .features-carousel .feature-card {
   position: absolute;
   min-width: 800px;
   max-width: 1000px;
@@ -501,8 +511,8 @@ body.footer-legal-page .section {
   margin: 0 auto;
 }
 
-/* Ensure carousel grid doesn't force grid columns */
-.features-carousel .features-grid {
+/* When JS is enabled, use carousel-centered layout */
+body.js-enabled .features-carousel .features-grid {
   display: flex;
   justify-content: center;
   align-items: center;
