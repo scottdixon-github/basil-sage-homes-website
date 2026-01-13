@@ -17,6 +17,9 @@ server/*.db
 dist/
 dist-ssr/
 *.local
+public/.htaccess
+public/robots.txt
+public/sitemap.xml
 
 # Environment variables
 .env
