@@ -1503,10 +1503,6 @@ nav {
     font-size: 1.75rem;
   }
 
-  /* Hide heavy video on smaller screens; use poster/background instead */
-  .hero-video {
-    display: none;
-  }
 }
 
 /* Small Mobile Styles (max-width: 480px) */
