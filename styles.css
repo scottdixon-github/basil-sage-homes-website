@@ -40,7 +40,7 @@ body {
   position: relative;
   color: white;
   padding: 4rem 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 58, 138, 0.6) 100%),
+  background: linear-gradient(135deg, rgba(44, 34, 22, 0.6) 0%, rgba(92, 70, 44, 0.6) 100%),
     url('assets/charleston-sc.png') center/cover no-repeat;
   min-height: 80vh;
   display: flex;
@@ -73,7 +73,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(210, 180, 140, 0.22) 0%, rgba(250, 242, 226, 0.22) 100%);
   z-index: 1;
 }
 
@@ -234,14 +234,14 @@ body.faq-page {
 
 /* Property detail pages with translucent gradient light blue */
 body.property-detail-page {
-  background: linear-gradient(135deg, rgba(135, 206, 235, 0.3) 0%, rgba(100, 181, 246, 0.25) 50%, rgba(135, 206, 235, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(245, 230, 204, 0.40) 0%, rgba(250, 242, 226, 0.30) 50%, rgba(245, 230, 204, 0.40) 100%);
   min-height: 100vh;
 }
 
 body.property-detail-page .hero {
   min-height: 50vh;
   padding: 2rem 0;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.85) 0%, rgba(59, 130, 246, 0.75) 100%);
+  background: linear-gradient(135deg, rgba(92, 70, 44, 0.85) 0%, rgba(152, 117, 84, 0.75) 100%);
 }
 
 body.property-detail-page .hero-content {
@@ -419,7 +419,7 @@ body.footer-legal-page .section {
 
 /* FEATURES */
 .features {
-  background: linear-gradient(135deg, rgba(240, 249, 255, 0.4) 0%, rgba(224, 242, 254, 0.5) 100%),
+  background: linear-gradient(135deg, rgba(250, 242, 226, 0.45) 0%, rgba(245, 230, 204, 0.55) 100%),
     url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
   background-size: 110%;
   background-position: center;
@@ -546,7 +546,7 @@ body.js-enabled .features-carousel .features-grid {
 .feature-card:hover {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  background: linear-gradient(135deg, rgba(240, 249, 255, 0.4) 0%, rgba(224, 242, 254, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(250, 242, 226, 0.45) 0%, rgba(245, 230, 204, 0.55) 100%);
 }
 
 .feature-icon {
@@ -847,7 +847,7 @@ body.js-enabled .features-carousel .features-grid {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(210, 180, 140, 0.12) 0%, rgba(245, 158, 11, 0.08) 100%);
 }
 
 /* CONTACT */
@@ -974,7 +974,7 @@ body.js-enabled .features-carousel .features-grid {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #1e40af, transparent);
+  background: linear-gradient(90deg, transparent, #d2b48c, transparent);
   animation: shimmer 3s infinite;
 }
 
@@ -1576,14 +1576,14 @@ nav {
    LEGAL FOOTER STYLES (Standardized)
    ========================================= */
 .legal-footer {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(147, 197, 253, 0.2) 50%, rgba(219, 234, 254, 0.25) 100%);
+  background: linear-gradient(135deg, rgba(245, 230, 204, 0.45) 0%, rgba(250, 242, 226, 0.40) 50%, rgba(255, 237, 213, 0.45) 100%);
   backdrop-filter: blur(30px) saturate(200%) brightness(1.1);
   -webkit-backdrop-filter: blur(30px) saturate(200%) brightness(1.1);
   color: #1f2937;
   padding: 2rem 0 1rem;
   margin-top: 0;
-  border-top: 2px solid rgba(59, 130, 246, 0.5);
-  box-shadow: 0 -8px 32px rgba(59, 130, 246, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-top: 2px solid rgba(210, 180, 140, 0.55);
+  box-shadow: 0 -8px 32px rgba(92, 70, 44, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* FIX: Prevent global Liquid Glass styling from affecting the footer container */
@@ -1883,8 +1883,8 @@ body .footer .container {
 
 /* Legal Page Specific Helper Classes */
 .info-box {
-  background: #eff6ff;
-  border-left: 4px solid #3b82f6;
+  background: rgba(250, 242, 226, 0.85);
+  border-left: 4px solid #d2b48c;
   padding: 1.5rem;
   border-radius: 8px;
   margin: 1.5rem 0;
@@ -2044,7 +2044,7 @@ body .footer .container {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #5c462c 0%, #987554 100%);
   border: none;
   color: white;
   font-size: 24px;
@@ -2067,12 +2067,12 @@ body .footer .container {
   right: 0;
   width: 320px;
   height: 450px;
-  background: rgba(240, 249, 255, 0.75);
+  background: rgba(250, 242, 226, 0.78);
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  box-shadow: 0 8px 32px rgba(92, 70, 44, 0.18);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -2088,7 +2088,7 @@ body .footer .container {
 
 .chat-header {
   padding: 1rem 1.25rem;
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.95) 0%, rgba(59, 130, 246, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(92, 70, 44, 0.95) 0%, rgba(152, 117, 84, 0.85) 100%);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -2177,10 +2177,10 @@ body .footer .container {
 
 .message.user {
   align-self: flex-end;
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #5c462c 0%, #987554 100%);
   color: white;
   border-bottom-right-radius: 2px;
-  box-shadow: 0 2px 6px rgba(30, 64, 175, 0.2);
+  box-shadow: 0 2px 6px rgba(92, 70, 44, 0.2);
 }
 
 .chat-input-container {
@@ -2204,8 +2204,8 @@ body .footer .container {
 }
 
 .chat-input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  border-color: #d2b48c;
+  box-shadow: 0 0 0 2px rgba(210, 180, 140, 0.22);
 }
 
 .chat-btn-group {
