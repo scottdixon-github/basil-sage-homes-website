@@ -61,6 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
     yearSpan.textContent = new Date().getFullYear();
   }
 
+  // Lazy-load all images except ones explicitly marked eager
+  document.querySelectorAll('img:not([data-eager])').forEach((img) => {
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+    if (!img.hasAttribute('decoding')) {
+      img.setAttribute('decoding', 'async');
+    }
+  });
+
   // Smooth scrolling for anchor links
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
   anchorLinks.forEach(link => {
