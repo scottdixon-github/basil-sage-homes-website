@@ -1023,17 +1023,6 @@ nav {
   letter-spacing: 1px;
 }
 
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #1f2937;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  z-index: 1001;
-}
-
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -1069,28 +1058,30 @@ nav {
   color: #1e40af;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    padding: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    border-top: 1px solid #e5e7eb;
-  }
-  
-  .nav-links.active {
-    display: flex;
-  }
-  
-  .mobile-menu-toggle {
-    display: block;
-  }
+/* ENHANCEMENTS */
+.home-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.3);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.home-card:hover .home-badge {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+}
+
+.nav-links a.active {
+  color: #1e40af;
+  font-weight: 600;
 }
 
 /* RESPONSIVE DESIGN */
@@ -1098,18 +1089,13 @@ nav {
 /* Mobile Navigation Toggle */
 .mobile-menu-toggle {
   display: none;
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-  }
-  .nav-links.active {
-    display: flex;
-  }
+  background: none;
+  border: none;
+  color: #1f2937;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
 }
 
 /* Tablet Styles (768px - 1024px) */
@@ -1256,6 +1242,10 @@ nav {
 
 .nav-actions .nav-link:last-child {
   border-bottom: none;
+}
+
+.mobile-menu-toggle {
+  display: block;
 }
 
 /* Hero Section */
