@@ -35,3 +35,11 @@ build/
 # Temporary files
 *.tmp
 *.temp
+
+# SSL Certificates - Private Keys (NEVER COMMIT)
+ssl/*.key
+ssl/*.pfx
+ssl/*.p12
+*.key
+*.pfx
+*.p12
