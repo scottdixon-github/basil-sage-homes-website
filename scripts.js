@@ -1,5 +1,7 @@
 // FAQ accordion and other functionality
 document.addEventListener("DOMContentLoaded", function () {
+  // Flag that JS is enabled (used for carousel layout)
+  document.body.classList.add('js-enabled');
   // Mobile menu toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const navLinks = document.querySelector('.nav-links');
