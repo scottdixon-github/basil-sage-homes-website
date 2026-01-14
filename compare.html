@@ -66,22 +66,6 @@
       cursor: pointer;
     }
 
-    .property-checkmark {
-      font-size: 22px;
-      font-weight: 900;
-      line-height: 1;
-      color: #dc2626;
-      opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 0.15s ease, transform 0.15s ease;
-      user-select: none;
-    }
-
-    .property-option input[type="checkbox"]:checked + .property-checkmark {
-      opacity: 1;
-      transform: scale(1);
-    }
-
     .property-option-info {
       flex: 1;
     }
@@ -821,7 +805,6 @@
       selector.innerHTML = properties.map(prop => `
       <label class="property-option" for="prop-${prop.id}">
         <input type="checkbox" id="prop-${prop.id}" onchange="toggleProperty('${prop.id}')">
-        <span class="property-checkmark" aria-hidden="true">✓</span>
         <div class="property-option-info">
           <div class="property-option-name">${prop.name}</div>
           <div class="property-option-price">${prop.priceDisplay} • ${prop.beds} bed / ${prop.baths} bath</div>
