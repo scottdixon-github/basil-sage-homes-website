@@ -36,7 +36,8 @@
   <meta name="ICBM" content="33.0057, -80.1098">
 
   <!-- Preload hero poster to improve LCP -->
-  <link rel="preload" as="image" href="charleston-sc.png">
+  <link rel="preload" href="charleston-sc.webp" as="image">
+  <link rel="preload" href="herovideo.mp4" as="video" type="video/mp4">
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -99,12 +100,12 @@
   </nav>
 
   <header class="hero">
-    <video autoplay muted loop playsinline class="hero-video" preload="none" poster="charleston-sc.png">
+    <video autoplay muted loop playsinline class="hero-video" preload="none" poster="charleston-sc.webp">
       <source src="herovideo.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <img src="basil-sage-logo.png?v=1" alt="Basil & Sage Homes Logo" class="hero-logo" width="240" height="80" data-eager="true">
+      <img src="basil-sage-logo.png?v=1" alt="Basil & Sage Homes Logo" class="hero-logo" width="240" height="80" loading="lazy" data-eager="true">
       <div class="hero-text-card">
         <p class="hero-label">Ladson, South Carolina</p>
         <h1>Homes for Rent in Ladson, SC</h1>

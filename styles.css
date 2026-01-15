@@ -41,7 +41,7 @@ body {
   color: white;
   padding: 4rem 0;
   background: linear-gradient(135deg, rgba(62, 46, 24, 0.48) 0%, rgba(138, 106, 50, 0.48) 100%),
-    url('charleston-sc.png') center/cover no-repeat;
+    url('charleston-sc.webp') center/cover no-repeat;
   min-height: calc(80vh + 150px);
   display: flex;
   align-items: center;
@@ -875,7 +875,7 @@ body.js-enabled .features-carousel .features-grid {
 
 .about-image {
   height: 400px;
-  background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover;
+  background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
